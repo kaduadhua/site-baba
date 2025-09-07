@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>babycare</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+       <div class="main-title title">
+         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-flower-icon lucide-flower"><circle cx="12" cy="12" r="3"/><path d="M12 16.5A4.5 4.5 0 1 1 7.5 12 4.5 4.5 0 1 1 12 7.5a4.5 4.5 0 1 1 4.5 4.5 4.5 4.5 0 1 1-4.5 4.5"/><path d="M12 7.5V9"/><path d="M7.5 12H9"/><path d="M16.5 12H15"/><path d="M12 16.5V15"/><path d="m8 8 1.88 1.88"/><path d="M14.12 9.88 16 8"/><path d="m8 16 1.88-1.88"/><path d="M14.12 14.12 16 16"/></svg>
+
+        <h1>Painel de baba de bebês </h1>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-flower-icon lucide-flower"><circle cx="12" cy="12" r="3"/><path d="M12 16.5A4.5 4.5 0 1 1 7.5 12 4.5 4.5 0 1 1 12 7.5a4.5 4.5 0 1 1 4.5 4.5 4.5 4.5 0 1 1-4.5 4.5"/><path d="M12 7.5V9"/><path d="M7.5 12H9"/><path d="M16.5 12H15"/><path d="M12 16.5V15"/><path d="m8 8 1.88 1.88"/><path d="M14.12 9.88 16 8"/><path d="m8 16 1.88-1.88"/><path d="M14.12 14.12 16 16"/></svg>
+       </div>
+   
+        <div class="painel">
+            <div class="children-box">
+                <div class="children">
+                    <div class="children-title">
+                        <p class="subtitle" >Crianças presentes: </p>
+
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-users-icon lucide-users"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><path d="M16 3.128a4 4 0 0 1 0 7.744"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><circle cx="9" cy="7" r="4"/></svg>
+                    </div>
+
+                    <div class="children-count"><p class="count">0</p></div>
+
+                      
+                </div>
+            </div>
+
+            <div class="money-box">
+                <div class="children-title">
+                        <p class="subtitle">Ganhos no mês: </p>
+
+                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-circle-dollar-sign-icon lucide-circle-dollar-sign"><circle cx="12" cy="12" r="10"/><path d="M16 8h-6a2 2 0 1 0 0 4h4a2 2 0 1 1 0 4H8"/><path d="M12 18V6"/></svg>
+                    </div>
+
+                    <div class="children-count"><p class="money money-count count">0</p></div>
+                    <div class="button" onclick="moneyActive()"><button>+</button></div>
+                    <div class="moneyhidden-box">
+                        <div class="namebox">
+               <input type="number" class="money-input" placeholder=" " required>
+               <label for="money">Adicionar uma quantia</label>
+                    </div>
+
+                    <button class="addmoney" onclick="addmoney()">Adicionar quantia</button>
+                    </div>
+            </div>
+        </div>
+
+      <div class="settings-box">
+          <div class="actions-box">
+            <div class="title">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-settings-icon lucide-settings"><path d="M9.671 4.136a2.34 2.34 0 0 1 4.659 0 2.34 2.34 0 0 0 3.319 1.915 2.34 2.34 0 0 1 2.33 4.033 2.34 2.34 0 0 0 0 3.831 2.34 2.34 0 0 1-2.33 4.033 2.34 2.34 0 0 0-3.319 1.915 2.34 2.34 0 0 1-4.659 0 2.34 2.34 0 0 0-3.32-1.915 2.34 2.34 0 0 1-2.33-4.033 2.34 2.34 0 0 0 0-3.831A2.34 2.34 0 0 1 6.35 6.051a2.34 2.34 0 0 0 3.319-1.915"/><circle cx="12" cy="12" r="3"/></svg>
+                <p>Configurações: </p>
+            </div>
+
+            <div class="actions">
+                
+                <div class="action" onclick="remindersActive()">
+                   <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-bell-ring-icon lucide-bell-ring"><path d="M10.268 21a2 2 0 0 0 3.464 0"/><path d="M22 8c0-2.3-.8-4.3-2-6"/><path d="M3.262 15.326A1 1 0 0 0 4 17h16a1 1 0 0 0 .74-1.673C19.41 13.956 18 12.499 18 8A6 6 0 0 0 6 8c0 4.499-1.411 5.956-2.738 7.326"/><path d="M4 2C2.8 3.7 2 5.7 2 8"/></svg>
+                    <p class="actiontitle">Lembretes</p>
+                </div>
+
+                 <div class="action" onclick="newchildActive()">
+                   <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-baby-icon lucide-baby"><path d="M10 16c.5.3 1.2.5 2 .5s1.5-.2 2-.5"/><path d="M15 12h.01"/><path d="M19.38 6.813A9 9 0 0 1 20.8 10.2a2 2 0 0 1 0 3.6 9 9 0 0 1-17.6 0 2 2 0 0 1 0-3.6A9 9 0 0 1 12 3c2 0 3.5 1.1 3.5 2.5s-.9 2.5-2 2.5c-.8 0-1.5-.4-1.5-1"/><path d="M9 12h.01"/></svg>
+                    <p class="actiontitle">Nova criança</p>
+                </div>
+
+                  <div class="action" onmouseover="hover">
+                   <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-save-icon lucide-save"><path d="M15.2 3a2 2 0 0 1 1.4.6l3.8 3.8a2 2 0 0 1 .6 1.4V19a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2z"/><path d="M17 21v-7a1 1 0 0 0-1-1H8a1 1 0 0 0-1 1v7"/><path d="M7 3v4a1 1 0 0 0 1 1h7"/></svg>
+                    <p class="actiontitle">Salvar alterações</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="hidden-boxs">
+           <div class="children-boxhidden">
+          <div class="title-box">
+              <div class="title">
+               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-baby-icon lucide-baby"><path d="M10 16c.5.3 1.2.5 2 .5s1.5-.2 2-.5"/><path d="M15 12h.01"/><path d="M19.38 6.813A9 9 0 0 1 20.8 10.2a2 2 0 0 1 0 3.6 9 9 0 0 1-17.6 0 2 2 0 0 1 0-3.6A9 9 0 0 1 12 3c2 0 3.5 1.1 3.5 2.5s-.9 2.5-2 2.5c-.8 0-1.5-.4-1.5-1"/><path d="M9 12h.01"/></svg> 
+                <p>Adicionar uma nova criança a lista: </p>
+            </div>
+          
+          </div>
+          <!-- box de painel-criança -->
+           <div class="info-box">
+             <div class="namebox">
+               <input type="text" class="name" placeholder=" " required>
+               <label for="name">Nome da criança</label>
+            </div>
+             <div class="namebox">
+               <input type="email" class="phone" placeholder=" " required>
+               <label for="phone">Email de contato</label>
+            </div>
+
+             <div class="namebox">
+               <input type="time" class="time" placeholder=" " required>
+               <label for="time">Data de chegada</label>
+            </div>
+           </div>
+
+          <div class="observations-box">
+            <div class="observations">
+                <input type="text" class="observation" placeholder=" ">
+               <label for="observation">Obervações para a criança</label>
+            </div>
+           </div>
+           <div><button class="addmoney" onclick="addchildren()">Adicionar criança</button></div>
+           </div>
+
+           <!-- box de observações  -->
+
+           <!-- box de lembretes -->
+           <div class="reminders">
+            <div class="addnewreminders">
+                <button class="addreminder title" onclick="remindershiddenActive()">Adicionar um novo lembrete</button>
+            </div>
+            <div class="remindershidden">
+              <div class="reminders-title">
+                <p>Adicionar uma lembrete: </p>
+
+                 <div class="remidershiddenbox observations">
+
+               <input type="text" class="remidersinput" placeholder=" " required>
+               <label for="remidersinput">Novo lembrente</label>
+
+                </div>
+            <div class="button">
+              <button class="addreminder title" onclick="addreminder()">Adicionar lembrente</button>
+              
+            </div>
+            
+             </div>
+             
+            </div>
+            <div class="reminders-box">
+                <div class="reminders-title title">
+                    <p>os lembretes serão mostrados aqui a baixo</p>
+                </div>
+
+               <div class="reminders-list">
+               
+               </div>
+               <div class="concludereminders-list">
+
+               </div>
+            </div>
+           </div>
+
+        </div>
+      </div>
+      <div class="children-list">
+        <p>crianças na lista: </p>
+        <div class="box-list">
+         
+        </div>
+      </div>
+    </div>
+    
+    <script>
+// --- Seletores principais ---
+const observation = document.querySelector(".action");
+const remindersbox = document.querySelector(".reminders");
+const childrenbox = document.querySelector(".children-boxhidden");
+const addreminderbox = document.querySelector(".remindershidden");
+const list = document.querySelector(".reminders-list");
+list.style.display = "none";
+
+// --- Funções de exibir seções ---
+function remindersActive() {
+  remindersbox.style.display = "block";
+  childrenbox.style.display = "none";
+}
+
+function newchildActive() {
+  childrenbox.style.display = "block";
+  remindersbox.style.display = "none";
+}
+
+function remindershiddenActive() {
+  addreminderbox.style.display = "block";
+  list.style.display = "block";
+}
+
+function moneyActive() {
+  const moneypainel = document.querySelector(".moneyhidden-box");
+  moneypainel.style.display = "block";
+}
+
+// --- LEMBRETES ---
+function addreminder(reminderInputValue = null) {
+  addreminderbox.style.display = "none";
+  const reminderinput = reminderInputValue !== null 
+    ? { value: reminderInputValue } 
+    : document.querySelector(".remidersinput");
+
+  let box = document.createElement("div");
+  box.className = "reminderlist-box";
+
+  let userpbox = document.createElement("div");
+  userpbox.className = "userp-box";
+
+  let systemp = document.createElement("p");
+  systemp.className = "system-p";
+  systemp.innerText = "Lembrete: ";
+
+  let userp = document.createElement("p");
+  userp.className = "inputp";
+  userp.innerText = reminderinput.value;
+
+  let choicebox = document.createElement("div");
+  choicebox.className = "choice-box";
+
+  let del = document.createElement("button");
+  del.className = "del-button";
+  del.innerText = "Delete";
+  del.addEventListener("click", delreminder);
+
+  let conclude = document.createElement("button");
+  conclude.className = "conclude-button";
+  conclude.innerText = "Finalizar";
+  conclude.addEventListener("click", concludereminder);
+
+  list.appendChild(box);
+  box.appendChild(userpbox);
+  userpbox.appendChild(systemp);
+  userpbox.appendChild(userp);
+  box.appendChild(choicebox);
+  choicebox.appendChild(del);
+  choicebox.appendChild(conclude);
+
+  // Salvar no Local Storage
+  if (reminderInputValue === null) {
+    let reminders = JSON.parse(localStorage.getItem("reminders")) || [];
+    reminders.push(reminderinput.value);
+    localStorage.setItem("reminders", JSON.stringify(reminders));
+    reminderinput.value = "";
+  }
+
+  list.style.display = "block";
+}
+
+function delreminder(e) {
+  const texto = e.target.closest(".reminderlist-box").querySelector(".inputp").innerText;
+  let reminders = JSON.parse(localStorage.getItem("reminders")) || [];
+  reminders = reminders.filter(r => r !== texto);
+  localStorage.setItem("reminders", JSON.stringify(reminders));
+  e.target.closest(".reminderlist-box").remove();
+}
+
+function concludereminder(e) {
+  const concludereminderbox = document.querySelector(".concludereminders-list");
+
+  let originalBox = e.target.closest(".reminderlist-box");
+  let texto = originalBox.querySelector(".inputp").innerText;
+
+  let box2 = document.createElement("div");
+  box2.className = "concludebox";
+
+  let systemavise = document.createElement("p");
+  systemavise.innerText = "Lembrete concluído:";
+
+  let userp = document.createElement("p");
+  userp.className = "inputp";
+  userp.innerText = texto;
+
+  concludereminderbox.appendChild(box2);
+  box2.appendChild(systemavise);
+  box2.appendChild(userp);
+
+  // Atualiza Local Storage
+  let reminders = JSON.parse(localStorage.getItem("reminders")) || [];
+  reminders = reminders.filter(r => r !== texto);
+  localStorage.setItem("reminders", JSON.stringify(reminders));
+
+  originalBox.remove();
+}
+
+// --- CRIANÇAS ---
+function addchildren(childData = null) {
+  const name = childData ? childData.name : document.querySelector(".name").value.trim();
+  const phone = childData ? childData.phone : document.querySelector(".phone").value.trim();
+  const time = childData ? childData.time : document.querySelector(".time").value.trim();
+  const observationText = childData ? childData.observation : document.querySelector(".observation").value.trim();
+
+  if (!name || !phone || !time) {
+    if (!childData) alert("Preencha todos os campos obrigatórios!");
+    return;
+  }
+
+  const childBox = document.createElement("div");
+  childBox.classList.add("children-list");
+
+  const userpBox = document.createElement("div");
+  userpBox.classList.add("userp-box");
+
+  let p1 = document.createElement("p");
+  p1.textContent = `👶 Nome: ${name}`;
+  let p2 = document.createElement("p");
+  p2.textContent = `📧 Email: ${phone}`;
+  let p3 = document.createElement("p");
+  p3.textContent = `🕒 Chegada: ${time}`;
+  userpBox.append(p1, p2, p3);
+
+  if (observationText) {
+    let p4 = document.createElement("p");
+    p4.textContent = `📝 Observação: ${observationText}`;
+    userpBox.appendChild(p4);
+  }
+
+  const concludeBox = document.createElement("div");
+  concludeBox.classList.add("conclude-box");
+
+  const btnConclude = document.createElement("button");
+  btnConclude.classList.add("conclude-button");
+  btnConclude.textContent = "Concluir";
+
+  const btnDelete = document.createElement("button");
+  btnDelete.classList.add("del-button");
+  btnDelete.textContent = "Excluir";
+
+  concludeBox.append(btnConclude, btnDelete);
+  childBox.append(userpBox, concludeBox);
+  document.querySelector(".box-list").appendChild(childBox);
+
+  // Contador
+  const childCountElement = document.querySelector(".children-count .count");
+  let currentCount = parseInt(childCountElement.textContent) || 0;
+  currentCount++;
+  childCountElement.textContent = currentCount;
+
+  if (!childData) {
+    // Salvar no Local Storage
+    let children = JSON.parse(localStorage.getItem("children")) || [];
+    children.push({ name, phone, time, observation: observationText });
+    localStorage.setItem("children", JSON.stringify(children));
+
+    // Limpar campos
+    document.querySelector(".name").value = "";
+    document.querySelector(".phone").value = "";
+    document.querySelector(".time").value = "";
+    document.querySelector(".observation").value = "";
+  }
+
+  btnDelete.addEventListener("click", () => {
+    childBox.remove();
+
+    // Atualiza Local Storage
+    let children = JSON.parse(localStorage.getItem("children")) || [];
+    children = children.filter(c => c.name !== name || c.phone !== phone || c.time !== time);
+    localStorage.setItem("children", JSON.stringify(children));
+
+    // Atualiza contador
+    let currentCount = parseInt(childCountElement.textContent) || 0;
+    currentCount = Math.max(currentCount - 1, 0);
+    childCountElement.textContent = currentCount;
+  });
+
+  btnConclude.addEventListener("click", () => {
+    childBox.style.backgroundColor = "#c6f6c6";
+  });
+}
+
+// --- DINHEIRO ---
+function addmoney() {
+  const moneyInput = document.querySelector(".money-input");
+  const moneyCount = document.querySelector(".money-count"); 
+
+  let valorAtual = parseFloat(moneyCount.textContent) || 0;
+  let valorNovo = parseFloat(moneyInput.value.replace(",", ".")) || 0;
+
+  if (valorNovo > 0) {
+    let total = valorAtual + valorNovo;
+    moneyCount.textContent = total.toFixed(2);
+    localStorage.setItem("money", moneyCount.textContent);
+
+    moneyInput.value = "";
+    document.querySelector(".moneyhidden-box").style.display = "none";
+  } else {
+    alert("Digite um valor válido!");
+  }
+}
+
+// --- CARREGAR DADOS SALVOS ---
+window.onload = function() {
+  // Lembretes
+  let reminders = JSON.parse(localStorage.getItem("reminders")) || [];
+  reminders.forEach(r => addreminder(r));
+
+  // Crianças
+  let children = JSON.parse(localStorage.getItem("children")) || [];
+  children.forEach(c => addchildren(c));
+
+  // Dinheiro
+  const moneyCount = document.querySelector(".money-count");
+  moneyCount.textContent = localStorage.getItem("money") || "0.00";
+}
+
+    </script>
+</body>
+</html>

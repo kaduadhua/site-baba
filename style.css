@@ -1,0 +1,586 @@
+/* 🎨 Fonte */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* 🌍 Reset / Base */
+body {
+  background-color: #e6e6e6;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  color: #52387a;
+}
+
+/* 🎬 Animações */
+@keyframes showright {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(360deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
+}
+
+/* 📦 Layout Principal */
+.container {
+  max-width: 900px;
+  width: 100%;
+  margin: 100px auto 0;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: transparent;
+  border: 3px solid #9e85c7;
+  box-shadow: 0 0 10px #9e85c7;
+  animation: showright 2s ease;
+}
+
+.painel {
+  margin: 0 auto;
+  display: flex;
+  gap: 10px;
+  justify-content: space-around;
+  animation: showright 2.5s ease;
+}
+
+.actions-box {
+  margin-top: 10px;
+  border: 2px solid #bba9d7;
+  border-radius: 10px;
+  background-color: #e3dcef;
+  box-shadow: 0 0 5px #bba9d7;
+  animation: showright 2.5s ease;
+}
+
+.actions {
+  display: flex;
+  gap: 20px;
+  padding: 10px;
+  justify-content: space-around;
+}
+
+/* 📋 Caixas */
+.children-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.children-box,
+.money-box {
+  max-width: 400px;
+  width: 100%;
+  padding: 20px;
+  border: 2px solid #bba9d7;
+  border-radius: 10px;
+  background-color: #e3dcef;
+  box-shadow: 0 0 5px #bba9d7;
+}
+
+.children-boxhidden {
+  margin-top: 10px;
+  padding: 20px;
+  border: 2px solid #bba9d7;
+  border-radius: 10px;
+  background-color: #e3dcef;
+  box-shadow: 0 0 5px #bba9d7;
+  animation: showright 2s ease;
+  display: none;
+}
+.children-list{
+    margin-top: 10px;
+  padding: 20px;
+  border: 2px solid #bba9d7;
+  border-radius: 10px;
+  background-color: #e3dcef;
+  box-shadow: 0 0 5px #bba9d7;
+  animation: showright 2s ease;
+}
+
+.moneyhidden-box {
+  display: none;
+  animation: showright 2s ease;
+}
+
+.info-box {
+  display: flex;
+  gap: 40px;
+}
+
+.presence-box {
+  display: flex;
+  gap: 10px;
+}
+.remindershidden{
+  display: none;
+ 
+}
+.button button{
+  padding: 5px;
+  background-color: #9073bf;
+  color: white;
+  font-size: 19px;
+  border: none;
+  transition: transform 0.3s ease;
+  border-radius: 5px;
+  width: 200px;
+}
+.button button:hover{
+  transform: scale(1.10);
+  cursor: pointer;
+}
+/* 📝 Textos */
+.title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 10px;
+}
+.reminders-title{
+  padding: 10px;
+  
+}
+.main-title {
+  justify-content: center;
+}
+
+.main-title svg {
+  animation: rotate 3s linear infinite;
+}
+
+.count {
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.subtitle {
+  font-size: 17px;
+}
+
+.money {
+  color: #00b33c;
+}
+
+/* 🔘 Botões principais */
+.action {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 200px;
+  font-size: 15px;
+  font-weight: bolder;
+  font-family: sans-serif;
+  color: #52387a;
+  border: 2px solid #bba9d7;
+  border-radius: 10px;
+  background-color: #d5cbe7;
+  box-shadow: 0 0 5px #bba9d7;
+  cursor: pointer;
+  padding: 0;
+}
+
+.action:hover {
+  color: #fff;
+  background-color: #9073bf;
+}
+.choice-box,
+.conclude-box{
+  display: flex;
+  gap: 10px;
+}
+.userp-box{
+  display: flex;
+  gap: 10px;
+
+}
+.userp-box p{
+  font-size: 20px;
+   font-family: "Poppins", sans-serif;
+}
+.del-button{
+    background-color: #ff4d4d;
+  border: 2px solid #ff3333;
+   padding: 10px;
+   width: 100px;
+  border-radius: 8px;
+  color: #fff;
+  font-family: "Poppins", sans-serif;
+  cursor: pointer;
+}
+.conclude-button{
+
+   background-color: #00e604;
+  border: 2px solid #00b303;
+     padding: 10px;
+   width: 100px;
+  border-radius: 8px;
+  color: #fff;
+  font-family: "Poppins", sans-serif;
+  cursor: pointer;
+}
+.conclude-button:hover,
+.del-button:hover{
+  transform: scale(1.11);
+  transition: transform 0.3s ease;
+}
+.concludebox{
+  display: flex;
+  gap: 10px;
+    color: #00b303;
+  border: 2px solid #bba9d7;
+  border-radius: 10px;
+  background-color: #d5cbe7;
+  box-shadow: 0 0 5px #bba9d7;
+  padding: 20px;
+font-family: "Poppins", sans-serif;
+}
+.concludereminders-list p{
+    text-decoration: line-through;
+}
+/* ✅ Presença */
+.present,
+.absent,
+.another {
+  padding: 8px;
+  border-radius: 8px;
+  color: #fff;
+  font-family: "Poppins", sans-serif;
+  cursor: pointer;
+}
+.reminderlist-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #f8f5ff; /* tom mais claro que o fundo */
+  border: 2px solid #bba9d7;
+  border-radius: 12px;
+  padding: 15px 20px;
+  margin-bottom: 15px;
+  box-shadow: 0 4px 6px rgba(82, 56, 122, 0.15);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.reminderlist-box:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 10px rgba(82, 56, 122, 0.25);
+}
+.userp-box {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.system-p {
+  font-size: 14px;
+  font-weight: bold;
+  color: #9073bf;
+}
+
+.inputp {
+  font-size: 16px;
+  font-weight: 500;
+  color: #52387a;
+}
+
+/* ➕ Outros botões */
+.addmoney {
+  margin-top: 10px;
+  padding: 7px;
+  border-radius: 5px;
+  background-color: #ff751a;
+  border: none;
+  color: #fff;
+  font-family: "Poppins", sans-serif;
+  cursor: pointer;
+}
+
+.addmoney:hover {
+  transform: scale(1.1);
+  transition: 0.4s ease;
+}
+
+.addreminder {
+  
+  width: 100%;
+ margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+  border-radius: 10px;
+  border: 2px solid transparent;
+  background-color: #9073bf;
+  color: #fff;
+  cursor: pointer;
+  box-sizing: border-box;
+}
+
+.addreminder:hover {
+  background-color: #bba9d7;
+  border: 2px solid #9073bf;
+  transform: scale(1.1);
+  transition: 0.3s ease;
+}
+
+.addobservation {
+  width: 200px;
+  padding: 10px;
+  font-size: 15px;
+  font-weight: bolder;
+  font-family: sans-serif;
+  border: 2px solid #bba9d7;
+  border-radius: 10px;
+  background-color: #d5cbe7;
+  box-shadow: 0 0 5px #bba9d7;
+  color: #52387a;
+  cursor: pointer;
+}
+
+.addobservation:hover {
+  transform: scale(1.1);
+  transition: 0.3s ease;
+}
+
+/* 📑 Inputs */
+.namebox,
+.observations {
+  position: relative;
+  width: 100%;
+  margin: 15px 0;
+}
+
+.namebox {
+  width: 250px;
+}
+
+.namebox input,
+.observations input {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  color: #52387a;
+  background: transparent;
+  border: 2px solid #9073bf;
+  border-radius: 4px;
+  outline: none;
+}
+
+.observations input {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  color: #52387a;
+  background: transparent;
+  border: 2px solid #9073bf;
+  border-radius: 4px;
+  outline: none;
+  box-sizing: border-box; 
+}
+.observations {
+  position: relative;
+  width: 100%;
+  margin: 0;
+}
+.namebox label,
+.observations label {
+  position: absolute;
+  top: 50%;
+  left: 12px;
+  padding: 0 5px;
+  color: #9073bf;
+  background-color: #D5CBE7;
+  transform: translateY(-30%);
+  pointer-events: none;
+  transition: 0.3s ease;
+}
+
+.namebox input:focus + label,
+.namebox input:not(:placeholder-shown) + label,
+.observations input:focus + label,
+.observations input:not(:placeholder-shown) + label {
+  top: -8px;
+  font-size: 12px;
+  color: #9073bf;
+}
+
+/* 🗒️ Lembretes */
+.addnewreminders,
+.reminders-title,
+.reminders-list,
+.newobservation-box {
+  margin-top: 10px;
+  border: 2px solid #bba9d7;
+  border-radius: 10px;
+  background-color: #d5cbe7;
+  box-shadow: 0 0 5px #bba9d7;
+}
+
+.addnewreminders {
+  padding: 10px;
+}
+
+.reminders {
+  display: none;
+  animation: showright 2s ease;
+}
+
+.reminders-title {
+  margin: 10px 0;
+  font-weight: bold;
+}
+
+.reminders-list {
+  padding: 20px;
+  margin: 10px 0;
+}
+
+.reminders-list li {
+  padding: 10px;
+  font-size: 18px;
+}
+
+.newobservation-box {
+  padding: 20px;
+  background-color: #e3dcef;
+  display: none;
+  animation: showright 2s ease;
+}
+
+/* 📱 Responsividade */
+@media (max-width: 420px) {
+  .container {
+    margin-top: 30px;
+    padding: 10px;
+  }
+  .main-title h1 {
+    font-size: 18px;
+    text-align: center;
+  }
+  .painel {
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+  }
+  .children-box,
+  .money-box {
+    max-width: 100%;
+  }
+  .actions {
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+  }
+  .action {
+    width: 100%;
+    font-size: 14px;
+    padding: 8px;
+  }
+  .namebox,
+  .observations input,
+  .addreminder {
+    width: 100%;
+  }
+}
+
+
+@media (max-width: 768px) {
+  .container {
+    margin-top: 50px;
+    padding: 15px;
+  }
+  .painel {
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+  }
+  .children-box,
+  .money-box {
+    max-width: 100%;
+    width: 95%;
+  }
+  .actions {
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+  }
+  .action {
+    width: 95%;
+    font-size: 14px;
+    padding: 8px;
+  }
+  .namebox,
+  .observations input,
+  .addreminder {
+    width: 100%;
+  }
+  .info-box {
+    flex-direction: column;
+    gap: 0;
+  }
+  .namebox {
+    width: 100%;
+  }
+}
+
+@media (max-width: 420px) {
+  .container {
+    margin-top: 30px;
+    padding: 10px;
+  }
+  .main-title h1 {
+    font-size: 16px; 
+    text-align: center;
+  }
+  .painel {
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+  }
+  .children-box,
+  .money-box {
+    max-width: 100%;
+    width: 95%;
+  }
+  .actions {
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+  }
+  .action {
+    width: 95%;
+    font-size: 14px;
+    padding: 8px;
+  }
+  .namebox,
+  .observations input,
+  .addreminder {
+    width: 100%;
+  }
+  .info-box {
+    flex-direction: column;
+    gap: 0;
+  }
+  .namebox {
+    width: 100%;
+  }
+    .addnewreminders {
+        flex-direction: row; 
+        align-items: center;
+    }
+    .observations {
+        margin: 15px 0;
+        width: 250px;
+    }
+ 
+  
+}
